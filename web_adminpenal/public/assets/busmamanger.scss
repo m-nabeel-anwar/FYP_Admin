@@ -1,0 +1,149 @@
+$first-color: #BFC9CA;
+$second-color: #5F0CE8;
+$third-color: #FF0000;
+$fourth-color: #E8930C;
+$fifth-color: #c3e600;
+
+$icon-size: 50px;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #eee;
+}
+h1 {
+  text-align: center;
+  font-weight: 300;
+  line-height: 30px;
+}
+.boxes-wrapper {
+  margin: 30px auto;
+  max-width: 800px;
+}
+.col {
+  width: 33%;
+  float: left;
+  padding: 15px;
+  @media (max-width: 800px) {
+    width: 50%;
+  }
+  @media (max-width: 500px) {
+    width: 75%;
+    float: none;
+    margin: 0 auto;
+  }
+}
+.hover-icon {
+  padding: 75px 0;
+}
+.hover-box {
+  position: relative;
+  text-align: center;
+  i {
+    font-size: $icon-size;
+    line-height: $icon-size;
+    color: #fff;
+  }
+  &.first {
+    background-color: $first-color;
+  }
+  &.second {
+    background-color: $second-color;
+    overflow: hidden;
+  }
+  &.third {
+    background-color: $third-color;
+    overflow: hidden;
+  }
+  &.fourth {
+    background-color: $fourth-color;
+    overflow: hidden;
+  }
+  &.fifth {
+    background-color: $fifth-color;
+    overflow: hidden;
+  }
+  &.sixth {
+    background-color: $first-color;
+    perspective: 3000px;
+	  perspective-origin: 0 50%;
+  }
+  &:hover {
+    &.first .hover-caption {
+      opacity: 1;
+      top: 10px;
+      left: 10px;
+    }
+    &.second .hover-caption {
+      top: 0;
+    }
+    &.third .hover-caption {
+      left: 0;
+    }
+    &.fourth {
+      .hover-caption {
+        left: 0;
+      }
+      .hover-icon {
+        left: 100%;
+      }
+    }
+    &.fifth {
+      .hover-caption {
+        top: 0;
+      }
+      .hover-icon {
+        top: -100%;
+      }
+    }
+    &.sixth .hover-caption {
+      transform: rotateY(0);
+    }
+  }
+}
+.hover-caption {
+  color: #fff;
+  background-color: #333;
+  transition: all .5s ease;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  .first & {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .second & {
+    top: 100%;
+  }
+  .third & {
+    left: -100%;
+    top: 0;
+  }
+  .fourth & {
+    left: -100%;
+    top: 0;
+  }
+  .fifth & {
+    left: 0;
+    top: 100%;
+  }
+  .sixth & {
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    transform: rotateY(-90deg);
+  }
+}
+.hover-icon {
+  transition: all .5s ease;
+  position: relative;
+  left: 0;
+  top: 0;
+}

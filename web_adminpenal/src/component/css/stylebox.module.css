@@ -1,0 +1,147 @@
+.bbody {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #eee;
+  margin-bottom: 530px;
+}
+
+/* h1 {
+  text-align: center;
+  font-weight: 300;
+  line-height: 30px;
+} */
+
+.boxes-wrapper {
+  margin: 20px auto;
+  max-width: 800px;
+  margin-left:390px;
+ 
+}
+
+.col {
+  width: 30%;
+  float: left;
+  padding: 15px;
+}
+@media (max-width: 800px) {
+  .col {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .col {
+    width: 75%;
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+.hover-icon {
+  padding: 75px 0;
+}
+
+.hover-box {
+  position: relative;
+  text-align: center;
+}
+.hover-box i {
+  font-size: 50px;
+  line-height: 50px;
+  color: #fff;
+}
+.hover-box.first {
+  background-color: #BFC9CA;
+}
+.hover-box.second {
+  background-color: #273746;
+  overflow: hidden;
+}
+.hover-box.third {
+  background-color: #BFC9CA;
+  overflow: hidden;
+}
+.hover-box.fourth {
+  background-color: #273746;
+  overflow: hidden;
+}
+.hover-box.fifth {
+  background-color: #BFC9CA;
+  overflow: hidden;
+}
+.hover-box.sixth {
+  background-color: #273746;
+  perspective: 3000px;
+  perspective-origin: 0 50%;
+}
+.hover-box:hover.first .hover-caption {
+  opacity: 1;
+  top: 10px;
+  left: 10px;
+  
+}
+.hover-box:hover.second .hover-caption {
+  top: 0;
+}
+.hover-box:hover.third .hover-caption {
+  left: 0;
+}
+.hover-box:hover.fourth .hover-caption {
+  left: 0;
+}
+.hover-box:hover.fourth .hover-icon {
+  left: 100%;
+}
+.hover-box:hover.fifth .hover-caption {
+  top: 0;
+}
+.hover-box:hover.fifth .hover-icon {
+  top: -100%;
+}
+.hover-box:hover.sixth .hover-caption {
+  transform: rotateY(0);
+}
+
+.hover-caption {
+  color: #fff;
+  background-color: #333;
+  transition: all .5s ease;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.first .hover-caption {
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.second .hover-caption {
+  top: 100%;
+}
+.third .hover-caption {
+  left: -100%;
+  top: 0;
+}
+.fourth .hover-caption {
+  left: -100%;
+  top: 0;
+}
+.fifth .hover-caption {
+  left: 0;
+  top: 100%;
+}
+.sixth .hover-caption {
+  left: 0;
+  top: 0;
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  transform: rotateY(-90deg);
+}
+
+.hover-icon {
+  transition: all .5s ease;
+  position: relative;
+  left: 0;
+  top: 0;
+}
