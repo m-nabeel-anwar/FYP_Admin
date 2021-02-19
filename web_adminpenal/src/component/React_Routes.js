@@ -67,6 +67,9 @@ import Logout from './Logout';
 // for protect our route
 import Protected from './Protected'
 
+// salary manager
+import updatesalaryrate from './updatesalaryrate';
+
 
  class React_Routes extends Component {
     render() {
@@ -159,6 +162,13 @@ import Protected from './Protected'
        
        <Protected path="/AddAdmin" component={AddAdmin}/>
        <Protected path="/AdminList" component={AdminList}/>
+
+
+       {/* salary manager */}
+       <Protected path='/updatesalaryrate' component={updatesalaryrate}/>
+
+
+
 {/*2nd time  */}
        {/* <Route path="/Login" exact component={Login}/>  */}
        

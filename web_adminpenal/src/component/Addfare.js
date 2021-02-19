@@ -17,6 +17,7 @@ class Addfare extends Component {
             busdata:[],
             fare:null,
             message:{},
+            allert:"",
             busname:""
         }
     }

@@ -29,7 +29,7 @@ import Login from './Login';
                           {/* <div styleName={Styless['sidebar-wrapper']}> */}
                               <ul className={Styless['sidebar-nav']}>
                                   <li className={Styless['sidebar-brand']}>
-                                  <Link to="/Home"><p style={{fontsize:'20px',color:'#2874A6'}}>Admin Panel</p></Link>
+                                  <Link to="/Home"><p style={{fontsize:'20px',color:'#5DADE2'}}>Admin Panel</p></Link>
                                   </li>
 
                                   <li>
