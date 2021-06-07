@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Styles from './css/overall.module.css';
 // auto complete link npm install react-places-autocomplete 
 import PlacesAutocomplete ,{geocodeByAddress,getLatLng} from 'react-places-autocomplete';
-
+// import google from 'react-places-autocomplete';
 import axios from 'axios'
 //import { null } from 'mathjs';
 
@@ -42,7 +42,7 @@ import Footer from './Footer'
       // .then(({lat,Lng}) => console.log('Success', {lat,Lng}))
       .then(({lat,lng}) => {this.setState({Lat1:lat,Lng1:lng})})     
       .catch(error => {console.error('Error', error)});
-      console.log(this.state.Lat1,this.state.Lng1)
+      // console.log(this.state.Lat1,this.state.Lng1)
   };
 
 
@@ -58,7 +58,7 @@ import Footer from './Footer'
       // .then(({lat,Lng}) => console.log('Success', {lat,Lng}))
       .then(({lat,lng}) => {this.setState({Lat2:lat,Lng2:lng})})
       .catch(error => {console.error('Error', error)});
-      console.log(this.state.Lat2,this.state.Lng2)
+      // console.log(this.state.Lat2,this.state.Lng2)
   };
 
 
@@ -68,7 +68,7 @@ import Footer from './Footer'
   {
     axios.get('http://127.0.0.1:8000/distinctunassignbus')
     .then(response=>{
-      console.log(response)
+      // console.log(response)
       this.setState({busdata:response.data})
 
     })
@@ -137,7 +137,7 @@ if(start.latitude!==end.latitude && start.latitude!==null && end.latitude!==null
   }
 axios.post('http://127.0.0.1:8000/addroute',data)
 .then(response=>{
-  console.log(response.data)
+  // console.log(response.data)
   this.setState({messagge:response.data})
   alert(this.state.messagge.message)
   this.setState({Lat1:null,Lng1:null,Lat2:null,Lng2:null,address:"",address2:"",busname:"",distance:null})
@@ -158,12 +158,24 @@ else
 
 
 
+
 }
 
 
 
     render() {
       const{busdata}=this.state
+      // const searchOptions = {
+      //   location: new google.maps.LatLng(24.8607,67.0011),
+      //   radius: 2000,
+      //   // types: ['address']
+      // }
+      const searchOptions = {
+        componentRestrictions: { country: ['pk'] },
+       
+        // types: ['city']
+      }
+      
         return (
 
           <div>
@@ -182,10 +194,13 @@ else
 
 
                 {/* <input placeholder="To" type="text" tabindex="1" required autofocus/> */}
+                
                 <PlacesAutocomplete
                   value={this.state.address}
                   onChange={this.handleChange}
                   onSelect={this.handleSelect}
+                  searchOptions={searchOptions}
+
                 >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
@@ -239,6 +254,7 @@ else
                   value={this.state.address2}
                   onChange={this.handleChange2}
                   onSelect={this.handleSelect2}
+                  searchOptions={searchOptions}
                 >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>

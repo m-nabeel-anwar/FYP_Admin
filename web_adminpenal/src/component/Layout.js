@@ -59,16 +59,18 @@ import Login from './Login';
                                   <Link to="/FeedBack"><p style={{fontSize:'20px'}}>FeedBack</p></Link>
                                   </li>
                                   <li>
-                                  <Link to="/AddAdmin"><p style={{fontSize:'20px'}}>Add Admin</p></Link>
+                                  {/* <Link to="/AddAdmin"><p style={{fontSize:'20px'}}>Add Admin</p></Link> */}
+                                  <Link to="/Addadminoth"><p style={{fontSize:'20px'}}>Add Admin</p></Link>
                                   </li>
 
                                   <li>
-                                  <Link to="/AdminList"><p style={{fontSize:'20px'}}>Admin List</p></Link>
+                                  {/* <Link to="/AdminList"><p style={{fontSize:'20px'}}>Admin List</p></Link> */}
+                                  <Link to="/AdminListoth"><p style={{fontSize:'20px'}}>Admin List</p></Link>
                                   </li>
 
 
                                   <li>
-                                  <Link  to="/Logout" ><p style={{fontSize:'20px'}}>Logout</p></Link>
+                                  <Link  to="/Logout"  ><p style={{fontSize:'20px'}}>Logout</p></Link>
                                   </li>
                                  
                                  
@@ -139,18 +141,18 @@ import Login from './Login';
                   
                     {/* <!-- ===== IMages ======= -->	*/} 						
                   
-                      <div class={Styless.slider}>
+                      <div className={Styless.slider}>
                         <div className={Styless.inset}>
                   
                           <figure>
-                            <figcaption class='title-1'>
+                            <figcaption className='title-1'>
                               <h1>Karachi Buses</h1>
                               <p>Public transport for you</p>  
                             
                               {/* photo-1520442922418-8211a6fe605c.jpg */}
 
                             </figcaption>
-                            <img style={{height:'330px'}} src="./assets/img/photo-1520442922418-8211a6fe605c.jpg" alt="" id='i-1' class='f'/>						
+                            <img style={{height:'330px'}} src="../assets/img/photo-1520442922418-8211a6fe605c.jpg" alt="" id="  i-1" class="f"/>						
                           </figure>
                   
                           <figure>
@@ -159,7 +161,7 @@ import Login from './Login';
                               <p>Find best route and save your time</p>
                             
                             </figcaption>
-                          <img style={{height:'330px'}} src="./assets/img/36490163-coach.jpg" alt="" id='i-1' class='f'/>						
+                          <img style={{height:'330px'}} src="../assets/img/36490163-coach.jpg" alt="" id="i-1" class="f"/>						
                           </figure>
                   
                           <figure>
@@ -168,7 +170,7 @@ import Login from './Login';
                               <p>we support you to reduce travel time</p> 
                               
                             </figcaption>
-                            <img style={{height:'330px'}} src="./assets/img/photo-1546955870-9fc9e5534349.jpg" alt="" id='i-1' class='f'/>					
+                            <img style={{height:'330px'}} src="../assets/img/photo-1546955870-9fc9e5534349.jpg" alt="" id="i-1" class="f"/>					
                           </figure>
                             <figure>
                             <figcaption  className='title-3'>
@@ -176,7 +178,7 @@ import Login from './Login';
                               <p>Bus follow there route and schedule</p> 
                               
                             </figcaption>
-                            <img style={{height:'330px'}} src="./assets/img/photo-1592924087948-2d32f1b82389.jpg" alt="" id='i-1' class='f'/>					
+                            <img style={{height:'330px'}} src="../assets/img/photo-1592924087948-2d32f1b82389.jpg" alt="" id="i-1" class="f"/>					
                           </figure>
                   
                   

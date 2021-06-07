@@ -144,7 +144,7 @@ import Footer from './Footer'
                            </div>
                            <div className={Styles.des}>
                            <p>You can view driver payment here...</p>
-                           <Link to="/PaymentInfo">
+                           <Link to="/SalaryManager">
                            <button>Click Here</button>
                            </Link>
 

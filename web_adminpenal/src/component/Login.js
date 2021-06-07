@@ -11,7 +11,8 @@ import md5 from 'md5'
          super(props)
          this.state={
              Email:'',
-             Password:''
+             Password:'',
+             passwordShown:false
 
          }
      }
@@ -43,6 +44,8 @@ import md5 from 'md5'
             {
     // alert("Login")
     localStorage.setItem('Login',response.data.uid)
+    localStorage.setItem('Type',response.data.Type)
+
     this.props.history.push('/Home')
 
     this.setState({Email:'',Password:''})
@@ -54,7 +57,8 @@ import md5 from 'md5'
             }
         })
         .catch((err)=>{
-            console.log(err)
+            // console.log(err)
+            alert("Network error")
         })
     
         
@@ -66,6 +70,23 @@ import md5 from 'md5'
         
     }
     
+
+// new 
+ togglePasswordVisiblity (e) {
+
+ 
+  
+  if(this.state.passwordShown)
+  {
+    
+this.setState({passwordShown:false})
+  }
+  else if(this.state.passwordShown!=true)
+  {
+   
+    this.setState({passwordShown:true})
+  }
+};
 
 
 
@@ -102,14 +123,19 @@ import md5 from 'md5'
                 <fieldset>
                   <input
                     placeholder="Password"
-                    type="password"
+                    // type="password"
+                    type={this.state.passwordShown ?"text":"password"}
                     tabindex="2"
                     name="Password"
                     value={this.state.Password}
                     maxLength="16"
+                   
                     onChange={this.onchange.bind(this)}
                     required
                   />
+<div style={{fontSize:15,marginLeft:2,}}>
+                  <input type="checkbox" onChange={this.togglePasswordVisiblity.bind(this)}/>   <b>Show Password</b> 
+                  </div>
                 </fieldset>
               
     

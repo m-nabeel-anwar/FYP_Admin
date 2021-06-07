@@ -25,7 +25,7 @@ import Footer from './Footer'
   {
     axios.get('http://127.0.0.1:8000/getallsubbus')
     .then(response=>{
-      console.log(response)
+      // console.log(response)
       this.setState({ isloading:true,postdata: response.data });
 
     })
@@ -100,7 +100,7 @@ import Footer from './Footer'
 
    </div>
 </div>
-<h3 style={{color:'red',marginLeft:'400px',marginTop:'5px'}}>{this.state.searcherrormessage}</h3>
+<h5 style={{color:'red',marginLeft:'400px',marginTop:'5px'}}>{this.state.searcherrormessage}</h5>
 </div>
 
 

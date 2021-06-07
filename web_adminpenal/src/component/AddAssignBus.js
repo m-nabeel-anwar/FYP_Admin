@@ -109,7 +109,7 @@ if(uid!==""&& BusName!=="" && NumberPlate!="")
 
 axios.post('http://127.0.0.1:8000/assigbus',data)
 .then(response=>{
-  console.log(response.data)
+  // console.log(response.data)
   this.setState({message:response.data})
   alert(this.state.message.message)
 this.setState({uid:"",BusName:"",NumberPlate:"",allert:""})

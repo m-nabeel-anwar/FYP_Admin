@@ -23,7 +23,7 @@ class UserInfo extends Component {
     axios
       .get("http://127.0.0.1:8000/getuser") //issue
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         this.setState({ isloading:true,postdata: response.data });
       })
       .catch((err) => {
@@ -98,7 +98,7 @@ class UserInfo extends Component {
 
    </div>
 </div>
-<h3 style={{color:'red',marginLeft:'400px',marginTop:'5px'}}>{this.state.searcherrormessage}</h3>
+<h5 style={{color:'red',marginLeft:'400px',marginTop:'5px'}}>{this.state.searcherrormessage}</h5>
 </div>
 
 

@@ -11,7 +11,9 @@ import {Link ,Redirect} from 'react-router-dom';
          this.state={
              Email:'',
              Password:'',
-             ConformPassword:''
+             ConformPassword:'',
+             passwordShown:false,
+             conformpasswordShown:false
          }
      }
 
@@ -96,6 +98,37 @@ else
 }
 
 
+togglePasswordVisiblity (e) {
+
+  // setPasswordShown(passwordShown ? false : true);
+  
+  if(this.state.passwordShown)
+  {
+    
+this.setState({passwordShown:false})
+  }
+  else if(this.state.passwordShown!=true)
+  {
+   
+    this.setState({passwordShown:true})
+  }
+};
+
+togglePasswordVisiblity2(e) {
+
+  // setPasswordShown(passwordShown ? false : true);
+  
+  if(this.state.conformpasswordShown)
+  {
+    
+this.setState({conformpasswordShown:false})
+  }
+  else if(this.state.conformpasswordShown!=true)
+  {
+   
+    this.setState({conformpasswordShown:true})
+  }
+};
 
     render() {
         return (
@@ -129,7 +162,7 @@ else
                 <fieldset>
                   <input
                     placeholder="NewPassword"
-                    type="password"
+                    type={this.state.passwordShown ?"text":"password"}
                     tabindex="2"
                     name="Password"
                     maxLength="16"
@@ -137,12 +170,15 @@ else
                     onChange={this.onchange.bind(this)}
                     required
                   />
+                  <div style={{fontSize:15,marginLeft:2,}}>
+                  <input type="checkbox" onChange={this.togglePasswordVisiblity.bind(this)}/>   <b>Show</b> 
+                  </div>
                 </fieldset>
 
                 <fieldset>
                   <input
                     placeholder="Conform Password"
-                    type="password"
+                    type={this.state.conformpasswordShown ?"text":"password"}
                     tabindex="2"
                     name="ConformPassword"
                     value={this.state.ConformPassword}
@@ -150,6 +186,9 @@ else
                     onChange={this.onchange.bind(this)}
                     required
                   />
+                  <div style={{fontSize:15,marginLeft:2,}}>
+                  <input type="checkbox" onChange={this.togglePasswordVisiblity2.bind(this)}/>   <b>Show</b> 
+                  </div>
                 </fieldset>
               
     
@@ -163,7 +202,7 @@ else
                     Reset Password
                   </button>
                 </fieldset>
-                <fieldset style={{color:'red',marginLeft:'180px',fontSize:20,fontFamily:'monospace'}}> <Link to="/Login">Go to Login</Link> </fieldset> 
+                <fieldset style={{color:'red',marginLeft:'180px',fontSize:20,fontFamily:'monospace'}}> <Link to="/Login">Goto Login</Link> </fieldset> 
               </form>
     
             </div>

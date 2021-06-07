@@ -115,27 +115,7 @@ import Footer from './Footer'
                         </div>
                       {/* <!-- /.col -->*/}
                       </Link>
-                        <Link to="#">
-                        <div className={Styles.col}>
-                          {/* <div class="hover-box sixth"> */}
-                          <div className={`${Styles['hover-box']} ${Styles.sixth}`} style={{backgroundColor:'#76528BFF'}}>
-                            
-                            <div className={Styles['hover-icon']}>
-                              <i class="icon ion-arrow-graph-up-right"></i>
-                              <h3 style={{fontSize:"15px",color:"#fff"}}>UNASSIGN</h3>
-                            </div>
-                          {/* <!-- /.hover-icon -->*/}
-                            <div className={Styles['hover-caption']}>
-                              <h3>Caption flip</h3>
-                              <p>Admin can able to see the Unassign bus list to assign the drivers.</p>
-                            </div>
-                            
-                          {/* <!-- /.hover-caption -->*/} 
-                          </div>
-                        {/*<!-- /.hover-box -->*/}  
-                        </div>
-                      {/* <!-- /.col -->*/}
-                      </Link>
+                       
                         
                       </div>
 

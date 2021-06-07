@@ -130,7 +130,7 @@ else
             .then((response) => {   
               if(response)
               {
-                console.log(response);
+                // console.log(response);
                 this.setState({
                   message: response.data,
                 });

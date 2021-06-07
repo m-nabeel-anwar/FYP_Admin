@@ -82,7 +82,7 @@ axios.post('http://127.0.0.1:8000/setrate',data)
             <div className={Styles.bodyy}>
 
           
-            <div className={Styles.container}>  
+            <div className={Styles.container} style={{marginTop:'-80px'}}>  
             <form id={Styles.contact} action="" method="post" onSubmit={this.sentdata.bind(this)}>
               <h3>UPDATE RATE</h3>
               <h4></h4>

@@ -24,7 +24,7 @@ import Footer from './Footer'
   {
     axios.get('http://127.0.0.1:8000/getallsubbus')
     .then(response=>{
-      console.log(response)
+      // console.log(response)
       this.setState({ isloading:true,postdata: response.data });
 
     })
@@ -46,15 +46,14 @@ import Footer from './Footer'
   axios
       .delete("http://127.0.0.1:8000/getsubbus", {data})
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         this.setState({message:response.data})
         alert(this.state.message.message)
       })
       .catch((err) => {
         console.log(err);
       });
-// alert(this.state.message.message)
-  //  alert(this.state.message)
+
     const postsdata = this.state.postdata.filter(item => item.uid !== id);
     this.setState({ postdata:postsdata });
 

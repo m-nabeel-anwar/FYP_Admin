@@ -40,6 +40,7 @@ class AddBus extends Component {
   }
 
 
+
   busnumber(e)
   {
     var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,<>\/?~.]/; 
@@ -70,13 +71,13 @@ class AddBus extends Component {
       NumberPlate,
     };
 
-    if(Name!=='' && NumberPlate!=='' && Name.length >=2 && NumberPlate.length >= 6)
+    if(Name!=='' && NumberPlate!=='' && Name.length >=1 && NumberPlate.length >= 6)
     {
     axios
       .post("http://127.0.0.1:8000/getsubbus", data)
       .then((response) => {
         
-        console.log(response);
+        // console.log(response);
         // alert(response.data);
         this.setState({
           message: response.data,

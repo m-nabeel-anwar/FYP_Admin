@@ -69,7 +69,13 @@ import Protected from './Protected'
 
 // salary manager
 import updatesalaryrate from './updatesalaryrate';
-
+import paysalary from './paysalary';
+import payeddriver from './payeddriver';
+//oth
+import AdminListoth from './AdminListoth';
+import Addadminoth from './Addadminoth';
+ 
+import Checklogin from './Checklogin'
 
  class React_Routes extends Component {
     render() {
@@ -81,13 +87,18 @@ import updatesalaryrate from './updatesalaryrate';
    
          <Switch>
         
-         <Route path="/" exact component={Login}/>
+
+         
+
+         <Checklogin path="/" exact component={Login}/>
          <Route path="/ForgetPassword" component={ForgetPassword}/>
 
          {/* <Route path="/Home"  component={Home}/>  */}
          <Protected path="/Home"  component={Home}/> 
 
          <Route path="/Login"  component={Login}/> 
+         <Route path="/Addadminoth" component={Addadminoth}/>
+         <Route path="/AdminListoth" component={AdminListoth}/>
 
          <Route path="/Logout"  component={Logout}/> 
 
@@ -166,6 +177,8 @@ import updatesalaryrate from './updatesalaryrate';
 
        {/* salary manager */}
        <Protected path='/updatesalaryrate' component={updatesalaryrate}/>
+       <Protected path="/paysalary" component={paysalary}/>
+       <Protected path="/payeddriver" component={payeddriver}/>
 
 
 
@@ -183,5 +196,7 @@ import updatesalaryrate from './updatesalaryrate';
         )
     }
 }
+
+
 
 export default React_Routes

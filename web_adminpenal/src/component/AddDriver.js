@@ -18,6 +18,7 @@ class AddDriver extends Component {
       Password: "",
       message:{},
       error:"",
+      passwordShown:false
     };
   }
 
@@ -56,6 +57,7 @@ else
 }
 }
 
+
 drivercontact(e)
 {
   var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,<>\/?~.a-z A_Z]/; //. hata dea hay or space bhi
@@ -72,7 +74,7 @@ else
 
 driveradress(e)
 {
-  var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|<>\?~]/; // /,. hata dea hay or space bhi
+  var format = /[`!@$%^&*()_+\-=\[\]{};':"\\|<>\?~]/; // /,.# hata dea hay or space bhi
   // var format= /[a-zA-Z ]/;
 if(format.test(e.target.value))
 {
@@ -86,7 +88,7 @@ else
 
 drivercnic(e)
 {
-  var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,<>\/?~.a-z A_Z]/;
+  var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,<>\/?~.a-z A_Z]/; //0-9
   // var format= /[a-zA-Z ]/;
 if(format.test(e.target.value))
 {
@@ -150,7 +152,7 @@ else
     }
     else
     {
-      this.setState({error:"Enter 16 digite password"})
+      this.setState({error:"Enter 16 digit password"})
     }
 
 
@@ -160,6 +162,23 @@ else
     }
 
   }
+
+  togglePasswordVisiblity (e) {
+
+ 
+  
+    if(this.state.passwordShown)
+    {
+      
+  this.setState({passwordShown:false})
+    }
+    else if(this.state.passwordShown!=true)
+    {
+     
+      this.setState({passwordShown:true})
+    }
+  };
+  
 
   render() {
     return (
@@ -183,7 +202,7 @@ else
             <fieldset>
               <input
                 placeholder="Driver Name"
-                type="text"
+                type="text" 
                 tabindex="1"
                 required
                 autofocus
@@ -244,7 +263,7 @@ else
             <fieldset>
               <input
                 placeholder="Password"
-                type="password"
+                type={this.state.passwordShown ?"text":"password"}
                 tabindex="4"
                 required
                 value={this.state.Password}
@@ -252,6 +271,9 @@ else
                 onChange={this.datachange.bind(this)}
                 maxLength="16"
               />
+              <div style={{fontSize:15,marginLeft:2,}}>
+                  <input type="checkbox" onChange={this.togglePasswordVisiblity.bind(this)}/>   <b>Show</b> 
+                  </div>
             </fieldset>
 <fieldset >
   <p style={{color:'red',fontSize:'12px',fontFamily:'monospace'}} >{this.state.error}</p>

@@ -22,7 +22,7 @@ import Footer from './Footer'
  {
    axios.get('http://127.0.0.1:8000/getsubbus?uid='+this.props.match.params.id)
    .then(response=>{
-     console.log(response)
+    //  console.log(response)
     this.setState({Bus:response.data})
     
     this.setState({Name:this.state.Bus.Name})
@@ -88,12 +88,12 @@ const NumberPlate=this.state.NumberPlate.toUpperCase();
     uid
   };
 // console.log(data)
-if(Name!==""&& NumberPlate!=="" && Name.length >=3 && NumberPlate.length >= 6)
+if(Name!==""&& NumberPlate!=="" && Name.length >=1 && NumberPlate.length >= 6)
     {
   axios
     .put("http://127.0.0.1:8000/getsubbus", data)
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       this.setState({
         message: response.data,
       });

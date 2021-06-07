@@ -35,7 +35,7 @@ import Footer from './Footer'
                                 {/* <!-- /.col -->*/}
                                 </Link>
           
-                                  <Link to="/DeleteAssignBusList">
+                                  <Link to="/paysalary">
                                   <div className={Styles.col}>
                                     {/* <div class="hover-box second"> */}
                                     <div className={`${Styles['hover-box']} ${Styles.second}`} style={{backgroundColor:'#F4D03F'}}>
@@ -54,7 +54,7 @@ import Footer from './Footer'
                                   </div>
                                 {/* <!-- /.col -->*/}
                                 </Link>
-                                  <Link to="/UpdateAssignBusList">
+                                  <Link to="/payeddriver">
                                   <div className={Styles.col}>
                                     {/* <div class="hover-box third"> */}
                                     <div className={`${Styles['hover-box']} ${Styles.third}`} style={{backgroundColor:'#606060FF'}}>

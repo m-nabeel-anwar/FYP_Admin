@@ -125,13 +125,13 @@ else
 
    </div>
 </div>
-<h3 style={{color:'red',marginLeft:'400px',marginTop:'5px'}}>{this.state.searcherrormessage}</h3>
+<h5 style={{color:'red',marginLeft:'400px',marginTop:'5px'}}>{this.state.searcherrormessage}</h5>
 </div>
 
 
 
                  {postdata.length ? postdata.map((post) => (
-                <div className={Styles['user-profile']} style={{marginBottom:'55px'}}>
+                <div className={Styles['user-profile']} style={{marginBottom:'65px'}}>
 	<img className={Styles.avatar} src="./assets/img/download (2).png" alt="Ash" />
                  <div className={Styles.username}>{post.Name}</div>
   <div className={Styles.bio}>

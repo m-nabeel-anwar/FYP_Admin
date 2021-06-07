@@ -1,0 +1,44 @@
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-left: 19%;
+  
+    margin-top: -6%;
+    margin-bottom: 2%;
+    width: 80%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #566573;
+    color: white;
+  }
+
+  #tablebutton {
+
+background-color: #7F8C8D ;
+color: white;
+width: 95%;
+border-radius: 32%;
+
+  }
+  #tablebutton:hover{
+    /* border-color: black; */
+    color: white;
+    
+  }
+  #tablebutton:active{
+    background-color:black;
+    border-radius: 30%;
+  }

@@ -23,7 +23,7 @@ componentDidMount()
 
   axios.get('http://127.0.0.1:8000/showbusnamelist')
   .then(response=>{
-    console.log(response)
+    // console.log(response)
     this.setState({busdata:response.data})
 
   })
